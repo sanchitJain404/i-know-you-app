@@ -17,7 +17,11 @@ const path = require('path')
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+    origin: "*", // Allow all origins
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  }));
 app.use(express.json());
 
 __dirname = path.resolve();
