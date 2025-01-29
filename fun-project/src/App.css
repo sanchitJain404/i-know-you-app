@@ -1,0 +1,237 @@
+/* App.css */
+
+/* Global Styles */
+
+.container-top {
+  display: flex;
+  padding: 40px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* Centered Container */
+.container {
+  background: white;
+  width: 500px;
+  max-width: 90%;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Title */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+.input-box {
+  padding: 12px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-box:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+}
+
+/* Submit Button */
+.button {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 12px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #1e40af;
+}
+
+/* Error Message */
+.error-message {
+  margin-top: 15px;
+  color: red;
+  font-size: 1.2rem;
+  font-weight: bold;
+  animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
+
+/* Image Container */
+.image-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  text-align: center;
+  transform: scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #2563eb;
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+}
+
+/* User Info Text */
+.user-info {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2563eb;
+  margin-top: 10px;
+}
+
+/* Custom Loader */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 100px;
+  aspect-ratio: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  display: grid;
+  background: #fff;
+  filter: blur(5px) contrast(10) hue-rotate(180deg);
+  mix-blend-mode: darken;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  margin: 30px 0;
+  border-radius: 100px;
+  background: #ff00ff;
+  animation: l4 2s infinite linear;
+}
+.loader:after {
+  --s:-1;
+}
+@keyframes l4{
+  100% {transform: rotate(calc(var(--s,1)*1turn))}
+}
+
+/* Loading Container for Alignment */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Progress Text Styling */
+.progress-text {
+  font-size: 1.1rem;
+  color: #2563eb;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.found-instagram {
+  font-size: 1.2rem;
+  color: #4CAF50; /* Green for positive confirmation */
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.input-error {
+  color: red;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* New Container for Additional Info */
+.additional-info-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 80%;
+  margin: 20px auto;
+}
+
+.additional-info-title {
+  font-size: 1.8rem;
+  color: #2563eb;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.info-list {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.info-list li {
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.info-list li strong {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+
+
+
+
+/* Responsive Fix */
+@media (max-width: 500px) {
+  .container {
+    width: 70%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+}
+
